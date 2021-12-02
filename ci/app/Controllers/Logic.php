@@ -1,7 +1,10 @@
 <?php namespace App\Controllers;
+use CodeIgniter\API\ResponseTrait;
 
 class Logic extends BaseController
 {
+	use ResponseTrait;
+
 	public function index()
 	{
 		return view('welcome_message');
@@ -15,8 +18,12 @@ class Logic extends BaseController
 
 		// var_dump($jsonObject->subject, $jsonObject->message);
 		// print_r($jsonObject->message);
-		echo('done '.$incoming->subject.' ');
-		print_r($incoming);
+		// echo('done '.$incoming->subject.' ');
+		// print_r($incoming);
+		$data = [
+			'message'=> 'created'
+		];
+		return $this->respond($data, 200);
 	}
 	//--------------------------------------------------------------------
 
