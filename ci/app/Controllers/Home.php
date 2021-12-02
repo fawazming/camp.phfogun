@@ -13,7 +13,7 @@ class Home extends BaseController
 		$jsonObject = json_decode(implode('', $incoming));
 		// do_anything($jsonObject->subject, $jsonObject->message) // do_anything - function anything doing
 
-		var_dump($jsonObject->subject, $jsonObject->message);
+		// var_dump($jsonObject->subject, $jsonObject->message);
 		echo($jsonObject->message);
 		echo('done');
 	}
