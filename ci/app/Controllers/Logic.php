@@ -16,6 +16,7 @@ class Logic extends BaseController
 		// var_dump($jsonObject->subject, $jsonObject->message);
 		// print_r($jsonObject->message);
 		echo('done '.$incoming->subject.' ');
+		print_r($incoming);
 	}
 	//--------------------------------------------------------------------
 
