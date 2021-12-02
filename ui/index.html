@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/chota.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>PMC Registration Portal</title>
+</head>
+
+<body>
+    <div class="coner">
+        <div class="progress-container">
+            <div class="progress" id="progress"></div>
+            <div class="circle active">1</div>
+            <div class="circle">2</div>
+            <div class="circle">3</div>
+            <div class="circle">4</div>
+        </div>
+
+        <div id="one">
+            <h4>Personal Details</h4>
+            <fieldset style="margin-bottom: 1rem; border-width: 0px;">
+                <div class="mb-3">
+                    <label for="fname" class="form-label">First Name</label>
+                    <input type="text" name="fname" id="fname" class="form-control" placeholder="" required
+                        aria-describedby="first name">
+                </div>
+                <div class="mb-3">
+                    <label for="lname" class="form-label">Last Name</label>
+                    <input type="text" name="lname" id="lname" class="form-control" placeholder="" required
+                        aria-describedby="Last name">
+                </div>
+                <div class="mb-3">
+                    <label for="lb" class="form-label">Local Branch</label>
+                    <select name="lb" id="lb"  required>
+                        <option value="">Select a Local Branch</option>
+                        <option value="Egba">Egba</option>
+                        <option value="Remo">Remo</option>
+                        <option value="Ijebu">Ijebu</option>
+                        <option value="Adoodo">Ado-Odo</option>
+                        <option value="others">Others</option>
+                    </select>
+                </div>
+            </fieldset>
+        </div>
+        <div id="two">
+            <h4>Contact Details</h4>
+            <fieldset style="margin-bottom: 1rem; border-width: 0px;">
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="number" name="phone" id="phone" class="form-control" placeholder="" required
+                        aria-describedby="Phone Number">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" name="email" id="email" class="form-control" placeholder="" required
+                        aria-describedby="Email">
+                </div>
+            </fieldset>
+        </div>
+        <div id="three">
+            <h4>Bank Account Details</h4>
+            <fieldset style="margin-bottom: 1rem; border-width: 0px;">
+                <p>When doing bank transfer to the account <br> provided, please narrate it using the code <br> provided
+                    below</p>
+                <div class="mb-3">
+                    <label for="ref" class="form-label">Reference Code</label>
+                    <input type="text" disabled name="ref" id="ref" class="form-control"
+                        aria-describedby="Reference Code">
+                </div>
+                <div class="mb-3">
+                    <h4 class="text-center" id="bank" style="margin-top: 1rem; margin-bottom:2px;">Sterling Bank</h4>
+                    <h3 class="text-center" id="accname" style="margin-top: .1rem; margin-bottom:2px;">PHF Egba</h3>
+                    <h5 class="text-center" id="accno" style="margin-top: .1rem; margin-bottom:2px;">2048634157</h5>
+                </div>
+            </fieldset>
+        </div>
+        <div id="four">
+            <h4>Work/School Details</h4>
+            <fieldset style="margin-bottom: 1rem; border-width: 0px;">
+                <div class="mb-3">
+                    <label for="category" class="form-label">Category</label>
+                    <select name="category" id="category" required>
+                        <option value="">Select a Category</option>
+                        <option value="Primary School">Primary School</option>
+                        <option value="Junior Secondary">Junior Secondary</option>
+                        <option value="Senior Secondary">Senior Secondary</option>
+                        <option value="Higher Institution">Higher Institution</option>
+                        <option value="Workers">Workers</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="sch" class="form-label">School/Profession</label>
+                    <input type="sch" name="sch" required id="sch" class="form-control" placeholder=""
+                        aria-describedby="sch">
+                </div>
+            </fieldset>
+        </div>
+        <div class="text-center">
+            <button class="btn" id="prev">Prev</button>
+            <button class="btn" id="next">Next</button>
+        </div>
+
+    </div>
+    <script src="assets/script.js"></script>
+</body>
+
+</html>
