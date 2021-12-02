@@ -1,11 +1,8 @@
 
-POST https://camp.phfogun.org/sns/pmc HTTP/1.1
+POST http://camp.phfogun.org/sns/pmc HTTP/1.1
 content-type: application/json
 
 {
-
 "subject":"example sibject",
-
 "message":"example message"
-
 }

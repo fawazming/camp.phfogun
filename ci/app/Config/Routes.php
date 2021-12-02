@@ -16,7 +16,7 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php'))
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Home');
+$routes->setDefaultController('Logic');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -30,8 +30,8 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
-$routes->post('/sns/pmc', 'Home::sms');
+$routes->get('/', 'Logic::index');
+$routes->post('/sns/pmc', 'Logic::sms');
 
 /**
  * --------------------------------------------------------------------

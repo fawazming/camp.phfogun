@@ -1,6 +1,6 @@
 <?php namespace App\Controllers;
 
-class Home extends BaseController
+class Logic extends BaseController
 {
 	public function index()
 	{
@@ -9,13 +9,13 @@ class Home extends BaseController
 
 	public function sms()
 	{
-		$incoming = $this->request->getPost();
-		$jsonObject = json_decode(implode('', $incoming));
+		$incoming = $this->request->getJSON();
+		// $jsonObject = json_decode(implode('', $incoming));
 		// do_anything($jsonObject->subject, $jsonObject->message) // do_anything - function anything doing
 
 		// var_dump($jsonObject->subject, $jsonObject->message);
-		echo($jsonObject->message);
-		echo('done');
+		// print_r($jsonObject->message);
+		echo('done '.$incoming->subject.' ');
 	}
 	//--------------------------------------------------------------------
 
