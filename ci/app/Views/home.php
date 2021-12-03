@@ -12,6 +12,10 @@
 
 <body>
     <div class="coner">
+        <div class="text-center" style="margin-bottom:8px; display: flex; justify-content: center; align-items: center;">
+            <img src="assets/logo.png" width="80px" alt="">
+            <h4>PMC '21 <br> Registration Portal</h4>
+        </div>
         <div class="progress-container">
             <div class="progress" id="progress"></div>
             <div class="circle active">1</div>
@@ -19,7 +23,7 @@
             <div class="circle">3</div>
             <div class="circle">4</div>
         </div>
-
+        <form action="<?=base_url('register')?>" method="POST">
         <div class="fieldset" id="one">
 
             <fieldset class="d-none d-block" style="margin-bottom: 1rem; border-width: 0px;">
@@ -74,26 +78,27 @@
                 </div>
                 <div class="mb-3">
                     <label for="sch" class="form-label">School/Profession</label>
-                    <input type="sch" name="sch" required id="sch" class="form-control" placeholder="" aria-describedby="sch">
+                    <input type="sch" name="school" required id="sch" class="form-control" placeholder="" aria-describedby="sch">
                 </div>
             </fieldset>
         </div>
         <div class="fieldset" id="four">
             <fieldset class="d-none" style="margin-bottom: 1rem; border-width: 0px;">
                 <h4>Bank Account Details</h4>
-                <p>When doing bank transfer to the account <br> provided, please narrate it using the code <br> provided
+                <p style="line-height: 1.8rem;">When doing bank transfer to the account <br> provided, please narrate it using the code <br> provided
                     below</p>
                 <div class="mb-3">
-                    <label for="ref" class="form-label">Reference Code</label>
-                    <input type="text" disabled name="ref" id="ref" class="form-control" aria-describedby="Reference Code">
+                    <label for="ref" class="form-label" >Reference Code</label>
+                    <input type="text" disabled value=<?='pzx'.$ref?> id="ref" class="form-control" aria-describedby="Reference Code">
+                    <input type="hidden"  name="ref" value=<?='pzx'.$ref?> >
                 </div>
                 <div class="mb-3">
-                    <h4 class="text-center" id="bank" style="margin-top: 1rem; margin-bottom:2px;">Sterling Bank</h4>
-                    <h3 class="text-center" id="accname" style="margin-top: .1rem; margin-bottom:2px;">PHF Egba</h3>
-                    <h5 class="text-center" id="accno" style="margin-top: .1rem; margin-bottom:2px;">2048634157</h5>
+                    <h4 class="text-center" id="bank" style="line-height: 1.5rem; margin-bottom:2px;">Sterling Bank</h4>
+                    <h3 class="text-center" id="accname" style="line-height:1.5rem; margin-bottom:2px;">PHF Egba</h3>
+                    <h5 class="text-center" id="accno" style="margin-top: .1rem; margin-bottom:2px;">0500883821</h5>
                 </div>
                 <div class="text-center form-check form-check-inline">
-                      <input type="checkbox" class="form-check-input" name="transfer" id="transfer">
+                      <input type="checkbox" class="form-check-input" id="transfer">
                       <label class="form-check-label" for="transfer">
                         I have done the transfer!
                       </label>
@@ -105,9 +110,9 @@
             <button class="btn" id="next">Next</button>
         </div>
         <div class="text-center d-none" id="btn2">
-            <button class="btn btn-success" id="reg">Confirm Registeration</button>
+            <button type="submit" class="btn btn-success" id="reg">Confirm Registeration</button>
         </div>
-
+        </form>
     </div>
     <script src="assets/script.js"></script>
 </body>
