@@ -15,12 +15,17 @@ class Logic extends BaseController
 		echo view('home',['ref'=>$this->uniqidReal(5)]);
 	}
 
+	public function msg($mg = "Hello")
+	{
+		echo view('msg', ['mg' => $mg]);
+	}
+
 	public function registration()
 	{
 		$incoming = $this->request->getPost();
 		$Delegates = new \App\Models\Delegates();
 		$Delegates->insert($incoming);
-		echo('Congratulations! You will be sent an SMS once confirmed');
+		$this->msg('Congratulations! You will be sent an SMS once confirmed');
 	}
 
 	public function sms()
