@@ -3,15 +3,15 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Broadsheet extends Model
+class Alerts extends Model
 {
-    protected $table = 'broadsheet';
+    protected $table = 'alerts';
     protected $primaryKey = 'id';
 
     protected $returnType = 'array';
-    protected $useSoftDeletes = false;
+    protected $useSoftDeletes = true;
 
-    protected $useTimestamps = false;
+    protected $useTimestamps = true;
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
     protected $deletedField  = 'deleted_at';
