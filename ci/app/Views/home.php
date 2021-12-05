@@ -21,7 +21,7 @@
             <div class="circle active">1</div>
             <div class="circle">2</div>
             <div class="circle">3</div>
-            <div class="circle">4</div>
+            <!-- <div class="circle">4</div> -->
         </div>
         <form action="<?=base_url('register')?>" method="POST">
         <div class="fieldset" id="one">
@@ -79,10 +79,17 @@
                 <div class="mb-3">
                     <label for="sch" class="form-label">School/Profession</label>
                     <input type="sch" name="school" required id="sch" class="form-control" placeholder="" aria-describedby="sch">
+                    <input type="hidden"  name="ref" value=<?=$ref?> >
+                </div>
+                <div class="text-center form-check form-check-inline">
+                      <input type="checkbox" class="form-check-input" id="transfer">
+                      <label class="form-check-label" for="transfer">
+                        All data provided are correct and accurate
+                      </label>
                 </div>
             </fieldset>
         </div>
-        <div class="fieldset" id="four">
+        <!-- <div class="fieldset" id="four">
             <fieldset class="d-none" style="margin-bottom: 1rem; border-width: 0px;">
                 <h4>Bank Account Details</h4>
                 <p style="line-height: 1.8rem;">When doing bank transfer to the account <br> provided, please narrate it using the code <br> provided
@@ -104,7 +111,7 @@
                       </label>
                 </div>
             </fieldset>
-        </div>
+        </div> -->
         <div class="text-center" id="btn1">
             <button class="btn" disabled id="prev">Prev</button>
             <button class="btn" id="next">Next</button>

@@ -87,3 +87,28 @@ body{
 fieldset{
     transition: 0.4s ease;
 }
+
+.border{
+    border: #e0e0e0 1px solid;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px 8px;
+}
+.border:hover{
+    border: #3498db 3px solid;
+    border-radius: 18px;
+    cursor: pointer;
+}
+.border>h2, .disabled>h2{
+    line-height: 0;
+}
+.border>p{
+    line-height: 1em;
+}
+.disabled{
+    border: #e0e0e0 1px solid;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px 8px;
+    cursor: not-allowed;
+}

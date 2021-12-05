@@ -31,9 +31,16 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Logic::index');
+$routes->get('/samp', 'Logic::samp');
+$routes->get('/buypin', 'Logic::buypin');
+$routes->get('/register', 'Logic::register');
+$routes->get('/pinstatus', 'Logic::pinstatus');
+$routes->get('/vendors', 'Logic::vendors');
 $routes->get('/msg', 'Logic::msg');
 $routes->post('/register', 'Logic::registration');
 $routes->post('/sns/pmc', 'Logic::sms');
+$routes->get('pin', 'Logic::pin');
+$routes->get('pinstat', 'Logic::pinstat');
 
 /**
  * --------------------------------------------------------------------

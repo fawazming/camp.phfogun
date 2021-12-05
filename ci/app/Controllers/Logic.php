@@ -2,9 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Models\Alerts;
 use CodeIgniter\API\ResponseTrait;
-use CodeIgniter\Model;
 
 class Logic extends BaseController
 {
@@ -12,7 +10,27 @@ class Logic extends BaseController
 
 	public function index()
 	{
-		echo view('home',['ref'=>$this->uniqidReal(5)]);
+		echo view('options');
+	}
+
+	public function buypin()
+	{
+		echo view('buypin');
+	}
+
+	public function register()
+	{
+		echo view('pin');
+	}
+
+	public function pinstatus()
+	{
+		echo view('pinstatus');
+	}
+
+	public function vendors()
+	{
+		echo view('vendors');
 	}
 
 	public function msg($mg = "Hello")
@@ -20,12 +38,42 @@ class Logic extends BaseController
 		echo view('msg', ['mg' => $mg]);
 	}
 
+	public function pin()
+	{
+		$incoming = $this->request->getGet();
+		$Pins = new \App\Models\Pins();
+
+		if($value = $Pins->where(['pin'=>$incoming['pin'],'used !='=>'yes'])->find()){
+			$Pins->update($value[0]['id'],['used'=>'using']);
+			echo view('home',['ref'=>$incoming['pin']]);
+		}else{
+			$this->msg("The pin you entered is invalid");
+		}
+	}
+
+	public function pinstat()
+	{
+		$incoming = $this->request->getGet();
+		$Pins = new \App\Models\Pins();
+
+		$value = $Pins->where(['pin'=>$incoming['pin']])->find();
+		$this->msg("Is the pin used? ". strtoupper($value[0]['used']));
+		
+	}
+
 	public function registration()
 	{
 		$incoming = $this->request->getPost();
+		$Pins = new \App\Models\Pins();
 		$Delegates = new \App\Models\Delegates();
+		$pin_id = $Pins->where('pin',$incoming['ref'])->find()[0]['id'];
+		if($value = $Pins->where(['id'=>$pin_id,'used'=>'yes'])->find()){
+			$this->msg('Sorry, this pin has been used.');
+		}else{
+		$Pins->update($pin_id,['used'=>'yes']);
 		$Delegates->insert($incoming);
 		$this->msg('Congratulations! You will be sent an SMS once confirmed');
+		}
 	}
 
 	public function sms()
@@ -54,6 +102,13 @@ class Logic extends BaseController
 			echo("no cryptographically secure random function available");
 		}
 		return substr(bin2hex($bytes), 0, $lenght);
+	}
+
+		
+	public function samp()
+	{
+		echo ($this->uniqidReal(8));
+		
 	}
 	//--------------------------------------------------------------------
 
