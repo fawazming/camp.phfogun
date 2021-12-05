@@ -28,6 +28,16 @@
                 <p>Access Bank <br> 0824997744 <br> Fawaz</p>
                 <small><a href="tel:08108097322">08108097322</a></small>
             </div>
+            <div class="col border">
+                <h2>Ijebu 1</h2>
+                <p>UBA <br> 2082020716 <br> Abdullah Oluwaseun</p>
+                <small><a href="tel:07030861214">07030861214</a></small>
+            </div>
+            <div class="col border">
+                <h2>Egba 2</h2>
+                <p>UBA <br> 2114674430 <br> Olabode Ismail</p>
+                <small><a href="tel:09065644640">09065644640</a></small>
+            </div>
         </div>
     </div>
     <script src="assets/script.js"></script>
