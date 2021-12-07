@@ -20,6 +20,8 @@
         <div class="row">
             <a href="<?=base_url('buypin')?>" class="col border">
                 <h2>Buy Pin</h2>
+                <small>This is your first step</small>
+
             </a>
             <a href="<?=base_url('register')?>" class="col border">
                 <h2>Register</h2>
@@ -27,7 +29,7 @@
             </a>
             <a href="<?=base_url('pinstatus')?>" class="col border">
                 <h2>Status</h2>
-                <small>Is my registeration successful?</small>
+                <small>Is my pin valid?</small>
             </a>
         </div>
     </div>

@@ -53,6 +53,14 @@
             <fieldset class="d-none" style="margin-bottom: 1rem; border-width: 0px;">
                 <h4>Contact Details</h4>
                 <div class="mb-3">
+                    <label for="gender" class="form-label">Gender</label>
+                    <select name="gender" id="gender" required>
+                        <option >Select a gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="mb-3">
                     <label for="phone" class="form-label">Phone Number</label>
                     <input type="number" name="phone" id="phone" class="form-control" placeholder="" required aria-describedby="Phone Number">
                 </div>
@@ -68,16 +76,17 @@
                 <div class="mb-3">
                     <label for="category" class="form-label">Category</label>
                     <select name="category" id="category" required>
-                        <option value="">Select a Category</option>
-                        <option value="Primary School">Primary School</option>
-                        <option value="Junior Secondary">Junior Secondary</option>
-                        <option value="Senior Secondary">Senior Secondary</option>
-                        <option value="Higher Institution">Higher Institution</option>
-                        <option value="Workers">Workers</option>
+                        <option>Select a Category</option>
+                        <option value="primary">Primary School</option>
+                        <option value="jsec">Junior Secondary</option>
+                        <option value="ssec">Senior Secondary</option>
+                        <option value="sch_leaver">School Leaver</option>
+                        <option value="hi">Higher Institution</option>
+                        <option value="Workers">Worker</option>
                     </select>
                 </div>
                 <div class="mb-3">
-                    <label for="sch" class="form-label">School/Profession</label>
+                    <label for="sch" class="form-label">School/Course/Profession</label>
                     <input type="sch" name="school" required id="sch" class="form-control" placeholder="" aria-describedby="sch">
                     <input type="hidden"  name="ref" value=<?=$ref?> >
                 </div>
@@ -113,8 +122,8 @@
             </fieldset>
         </div> -->
         <div class="text-center" id="btn1">
-            <button class="btn" disabled id="prev">Prev</button>
-            <button class="btn" id="next">Next</button>
+            <button type="button" class="btn" disabled id="prev">Prev</button>
+            <button type="button" class="btn" id="next">Next</button>
         </div>
         <div class="text-center d-none" id="btn2">
             <button type="submit" class="btn btn-success" id="reg">Confirm Registeration</button>

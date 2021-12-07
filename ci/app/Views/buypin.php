@@ -20,7 +20,7 @@
         <div class="row">
             <!-- <a href="<?=base_url('payonline')?>" class="col border"> -->
             <a href="#!" class="col border">
-                <h2>Pay Online</h2>
+                <h2> <strike>Pay Online</strike> </h2>
                 <small>Instant Pin Vending for registeration</small>
             </a>
             <a href="<?=base_url('vendors')?>" class="col border">
