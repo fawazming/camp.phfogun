@@ -71,8 +71,8 @@ class Logic extends BaseController
 			$this->msg('Sorry, this pin has been used.');
 		}else{
 		$Pins->update($pin_id,['used'=>'yes']);
-		$Delegates->insert($incoming);
-		$this->msg('Congratulations! You will be sent an SMS once confirmed');
+		$id = $Delegates->insert($incoming);
+		$this->msg('Congratulations! Your registration was successful <br> Reg. No: <b> '.$id.'</b>');
 		}
 	}
 
