@@ -44,7 +44,7 @@ class Logic extends BaseController
 		$Pins = new \App\Models\Pins();
 
 		if($value = $Pins->where(['pin'=>$incoming['pin'],'used !='=>'yes'])->find()){
-			$Pins->update($value[0]['id'],['used'=>'using']);
+			// $Pins->update($value[0]['id'],['used'=>'using']);
 			echo view('home',['ref'=>$incoming['pin']]);
 		}else{
 			$this->msg("The pin you entered is invalid");
@@ -70,8 +70,8 @@ class Logic extends BaseController
 		if($value = $Pins->where(['id'=>$pin_id,'used'=>'yes'])->find()){
 			$this->msg('Sorry, this pin has been used.');
 		}else{
-		$Pins->update($pin_id,['used'=>'yes']);
 		$id = $Delegates->insert($incoming);
+		$Pins->update($pin_id,['used'=>'yes']);
 		$this->msg('Congratulations! Your registration was successful <br> Reg. No: <b> '.$id.'</b>');
 		}
 	}
