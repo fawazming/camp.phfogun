@@ -70,9 +70,9 @@
                         <option class="org" value="others">Others</option>
                     </select>
                 </div>
-                <div class="mb-3">
+                <!-- <div class="mb-3">
                     <label for="category" class="form-label">Category</label>
-                    <select name="category" id="category" required value="<?=$udata['category']?>">
+                    <select name="category" id="category" required value="<?php//$udata['category']?>">
                         <option value="">Select a Category</option>
                         <option class="catg" value="primary">Primary School</option>
                         <option class="catg" value="jsec">Junior Secondary</option>
@@ -81,6 +81,11 @@
                         <option class="catg" value="hi">Higher Institution</option>
                         <option class="catg" value="Workers">Worker</option>
                     </select>
+                </div> -->
+                <div class="mb-3">
+                    <label for="category" class="form-label">Category: </label>
+                    <input type="hidden"  name="category" value="<?=$catg?>" >
+                    <span><?=$catg?></span>
                 </div>
                 <div class="mb-3">
                     <label for="sch" class="form-label">School/Course/Profession</label>
@@ -107,6 +112,6 @@
 <script>
     document.querySelector('#lb').selectedIndex = Array.from(document.querySelectorAll('.lb'),x=>x.value).indexOf('<?=$udata['lb']?>')+1;
     document.querySelector('#gender').selectedIndex = Array.from(document.querySelectorAll('.gend'),x=>x.value).indexOf('<?=$udata['gender']?>')+1;
-    document.querySelector('#category').selectedIndex = Array.from(document.querySelectorAll('.catg'),x=>x.value).indexOf('<?=$udata['category']?>')+1;
+    // document.querySelector('#category').selectedIndex = Array.from(document.querySelectorAll('.catg'),x=>x.value).indexOf('<?=$udata['category']?>')+1;
     document.querySelector('#org').selectedIndex = Array.from(document.querySelectorAll('.org'),x=>x.value).indexOf('<?=$udata['org']?>')+1;
 </script>

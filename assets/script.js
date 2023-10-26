@@ -22,7 +22,7 @@ lcamp.addEventListener('click', () => {
         document.querySelector('#gender').required = false;
         document.querySelector('#phone').required = false;
         document.querySelector('#email').required = false;
-        document.querySelector('#category').required = false;
+        // document.querySelector('#category').required = false;
         document.querySelector('#sch').required = false;
         document.querySelector('#org').required = false;
     }else{

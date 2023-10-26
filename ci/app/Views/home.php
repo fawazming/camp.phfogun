@@ -1,3 +1,15 @@
+        <?php 
+        $catg = '';
+        if($pinworth == '6500' || $pinworth == '8500'){
+            $catg = 'Secondary_Sch_Student';
+        }elseif ($pinworth == '7500' || $pinworth == '10000'){
+            $catg = 'Undergraduate';
+        }elseif ($pinworth == '9500' || $pinworth == '12000'){
+            $catg = 'Working_Class';
+        }else{
+            $catg = 'Invalid Category';
+        }
+        ?>
         <div class="progress-container">
             <div class="progress" id="progress"></div>
             <div class="circle active">1</div>
@@ -75,16 +87,9 @@
                     </select>
                 </div>
                 <div class="mb-3">
-                    <label for="category" class="form-label">Category</label>
-                    <select name="category" id="category" required>
-                        <option value="">Select a Category</option>
-                        <option value="primary">Primary School</option>
-                        <option value="jsec">Junior Secondary</option>
-                        <option value="ssec">Senior Secondary</option>
-                        <option value="sch_leaver">School Leaver</option>
-                        <option value="hi">Higher Institution</option>
-                        <option value="Workers">Worker</option>
-                    </select>
+                    <label for="category" class="form-label">Category: </label>
+                    <input type="hidden"  name="category" value="<?=$catg?>" >
+                    <span><?=$catg?></span>
                 </div>
                 <div class="mb-3">
                     <label for="sch" class="form-label">School/Course/Profession</label>

@@ -61,7 +61,7 @@ class Logic extends BaseController
 		$Pins = new \App\Models\Pins();
 		if($value = $Pins->where(['pin'=>$incoming['pin'],'used !='=>1])->find()){
             echo view('header');
-			echo view('home',['ref'=>$incoming['pin']]);
+			echo view('home',['ref'=>$incoming['pin'], 'pinworth'=>$value[0]['worth']]);
             echo view('footer');
 
 		}else{
@@ -111,7 +111,7 @@ class Logic extends BaseController
             $res = $Delegates22->where($wdata)->find();
             if($res){
                 echo view('header');
-                echo view('home2',['udata'=>$res[0],'ref'=>$incoming['ref']]);
+                echo view('home2',['udata'=>$res[0],'ref'=>$incoming['ref'], 'catg' =>$incoming['category'] ]);
                 echo view('footer');
             }else{
                 echo view('header');
