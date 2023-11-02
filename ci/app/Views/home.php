@@ -1,13 +1,17 @@
         <?php 
-        $catg = '';
-        if($pinworth == '6500' || $pinworth == '8500'){
-            $catg = 'Post/Secondary_Sch_Student';
-        }elseif ($pinworth == '7500' || $pinworth == '10000'){
-            $catg = 'Undergraduate';
-        }elseif ($pinworth == '9500' || $pinworth == '12000'){
-            $catg = 'Working_Class';
+        if($catg){
+            
         }else{
-            $catg = 'Invalid Category';
+            $catg = '';
+            if($pinworth == '6500' || $pinworth == '8500'){
+                $catg = 'Post/Secondary_Sch_Student';
+            }elseif ($pinworth == '7500' || $pinworth == '10000'){
+                $catg = 'Undergraduate';
+            }elseif ($pinworth == '9500' || $pinworth == '12000'){
+                $catg = 'Working_Class';
+            }else{
+                $catg = 'Invalid Category';
+            }
         }
         ?>
         <div class="progress-container">

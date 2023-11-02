@@ -115,7 +115,7 @@ class Logic extends BaseController
                 echo view('footer');
             }else{
                 echo view('header');
-                echo view('home',['ref'=>$incoming['ref']]);
+                echo view('home',['ref'=>$incoming['ref'], 'catg' =>$incoming['category']]);
                 echo view('footer');
             }
 
