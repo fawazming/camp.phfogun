@@ -15,7 +15,7 @@
         <div class="text-center" style="margin-bottom:8px; display: flex; justify-content: center; align-items: center;">
             <img src="assets/logo.png" width="80px" alt="">
 
-            <h4>PMC '22 <br> Registeration Portal</h4>
+            <h4>PMC '23 <br> Registeration Portal</h4>
         </div>
         <h5><a href="<?=base_url('/')?>">Home</a> > Buy pin from vendors</h5>
         <div class="row">
@@ -31,8 +31,8 @@
             </div>
             <div class="col border">
                 <h2>Egba 1</h2>
-                <p>Eco Bank <br> 5013061519 <br> Folorunso Hammed</p>
-                <small><a href="https://wa.me/2348098483103">08098483103</a></small>
+                <p>Opay <br> 8115401835 <br> Dauda Mojeed A</p>
+                <small><a href="https://wa.me/2348115401835">08115401835</a></small>
             </div>
             <div class="col border">
                 <h2>Ado Odo</h2>

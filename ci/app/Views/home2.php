@@ -88,7 +88,7 @@
                     <span><?=$catg?></span>
                 </div>
                 <div class="mb-3">
-                    <label for="sch" class="form-label">School/Course/Profession</label>
+                    <label for="sch" class="form-label">School/Course/Profession (Details of the above category)</label>
                     <input type="sch" name="school" required id="sch" class="form-control" placeholder="" aria-describedby="sch" value="<?=$udata['school']?>">
                     <input type="hidden"  name="ref" value="<?=$ref?>" >
                     <input type="hidden"  name="old" value="<?=$udata['id']?>" >

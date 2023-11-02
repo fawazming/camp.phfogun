@@ -1,7 +1,7 @@
         <?php 
         $catg = '';
         if($pinworth == '6500' || $pinworth == '8500'){
-            $catg = 'Secondary_Sch_Student';
+            $catg = 'Post/Secondary_Sch_Student';
         }elseif ($pinworth == '7500' || $pinworth == '10000'){
             $catg = 'Undergraduate';
         }elseif ($pinworth == '9500' || $pinworth == '12000'){
@@ -92,7 +92,7 @@
                     <span><?=$catg?></span>
                 </div>
                 <div class="mb-3">
-                    <label for="sch" class="form-label">School/Course/Profession</label>
+                    <label for="sch" class="form-label">School/Course/Profession (Details of the above category)</label>
                     <input type="sch" name="school" required id="sch" class="form-control" placeholder="" aria-describedby="sch">
                     <input type="hidden"  name="ref" value=<?=$ref?> >
                     <input type="hidden"  name="old" value="0" >
