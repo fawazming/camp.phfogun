@@ -1,7 +1,4 @@
         <?php 
-        if($catg){
-            
-        }else{
             $catg = '';
             if($pinworth == '6500' || $pinworth == '8500'){
                 $catg = 'Post/Secondary_Sch_Student';
@@ -12,7 +9,7 @@
             }else{
                 $catg = 'Invalid Category';
             }
-        }
+        
         ?>
         <div class="progress-container">
             <div class="progress" id="progress"></div>
