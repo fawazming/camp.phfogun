@@ -1,17 +1,17 @@
         <?php 
-          if(isset($catg)){}
-          else{
-            $catg = '';
-            if($pinworth == '6500' || $pinworth == '8500'){
-                $catg = 'Post/Secondary_Sch_Student';
-            }elseif ($pinworth == '7500' || $pinworth == '10000'){
-                $catg = 'Undergraduate';
-            }elseif ($pinworth == '9500' || $pinworth == '12000'){
-                $catg = 'Working_Class';
-            }else{
-                $catg = 'Invalid Category';
-            }
-          }
+          // if(isset($catg)){}
+          // else{
+          //   $catg = '';
+          //   if($pinworth == '6500' || $pinworth == '8500'){
+          //       $catg = 'Post/Secondary_Sch_Student';
+          //   }elseif ($pinworth == '7500' || $pinworth == '10000'){
+          //       $catg = 'Undergraduate';
+          //   }elseif ($pinworth == '9500' || $pinworth == '12000'){
+          //       $catg = 'Working_Class';
+          //   }else{
+          //       $catg = 'Invalid Category';
+          //   }
+          // }
         ?>
         <div class="progress-container">
             <div class="progress" id="progress"></div>
@@ -44,12 +44,12 @@
                         <option value="others">Others</option>
                     </select>
                 </div>
-                <div class="text-center form-check form-check-inline">
+                <!-- <div class="text-center form-check form-check-inline">
                       <input type="checkbox" class="form-check-input" name="lcamp" id="lcamp">
                       <label class="form-check-label" for="lcamp">
                         I attended last December camp at RSS, Sagamu
                       </label>
-                </div>
+                </div> -->
             </fieldset>
         </div>
         <div class="fieldset" id="two">
@@ -89,10 +89,22 @@
                         <option value="others">Others</option>
                     </select>
                 </div>
-                <div class="mb-3">
+                <!-- <div class="mb-3">
                     <label for="category" class="form-label">Category: </label>
-                    <input type="hidden"  name="category" value="<?=$catg?>" >
-                    <span><?=$catg?></span>
+                    <input type="hidden"  name="category" value="" >
+                    <span></span>
+                </div> -->
+                <div class="mb-3">
+                    <label for="category" class="form-label">Category</label>
+                    <select name="category" id="category" required >
+                        <option value="">Select a Category</option>
+                        <option class="catg" value="primary">Primary School</option>
+                        <option class="catg" value="jsec">Junior Secondary</option>
+                        <option class="catg" value="ssec">Senior Secondary</option>
+                        <option class="catg" value="sch_leaver">School Leaver</option>
+                        <option class="catg" value="hi">Higher Institution</option>
+                        <option class="catg" value="Workers">Worker</option>
+                    </select>
                 </div>
                 <div class="mb-3">
                     <label for="sch" class="form-label">School/Course/Profession (Details of the above category)</label>

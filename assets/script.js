@@ -2,7 +2,7 @@ let circles = document.querySelectorAll('.circle');
 let prog = document.querySelector('.progress');
 let fields = document.querySelectorAll('fieldset');
 let transfer = document.querySelector('#transfer');
-let lcamp = document.querySelector('#lcamp');
+// let lcamp = document.querySelector('#lcamp');
 let prev = document.querySelector('#prev');
 let next = document.querySelector('#next');
 
@@ -15,21 +15,21 @@ transfer.addEventListener('click', () => {
         document.querySelector('#btn2').classList.toggle('d-none');
     }
 })
-lcamp.addEventListener('click', () => {
-    if (lcamp.checked === true) {
-        document.querySelector('#btn1').classList.add('d-none');
-        document.querySelector('#btn3').classList.toggle('d-none');
-        document.querySelector('#gender').required = false;
-        document.querySelector('#phone').required = false;
-        document.querySelector('#email').required = false;
-        // document.querySelector('#category').required = false;
-        document.querySelector('#sch').required = false;
-        document.querySelector('#org').required = false;
-    }else{
-        document.querySelector('#btn1').classList.remove('d-none');
-        document.querySelector('#btn3').classList.toggle('d-none');
-    }
-})
+// lcamp.addEventListener('click', () => {
+//     if (lcamp.checked === true) {
+//         document.querySelector('#btn1').classList.add('d-none');
+//         document.querySelector('#btn3').classList.toggle('d-none');
+//         document.querySelector('#gender').required = false;
+//         document.querySelector('#phone').required = false;
+//         document.querySelector('#email').required = false;
+//         // document.querySelector('#category').required = false;
+//         document.querySelector('#sch').required = false;
+//         document.querySelector('#org').required = false;
+//     }else{
+//         document.querySelector('#btn1').classList.remove('d-none');
+//         document.querySelector('#btn3').classList.toggle('d-none');
+//     }
+// })
     console.log(document.querySelector('#gender').value);
 
 if(document.querySelector('#lb').value){

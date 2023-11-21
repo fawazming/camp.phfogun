@@ -124,12 +124,27 @@ class Logic extends BaseController
             if($pin['used'] == 1){
                 $this->msg('Sorry, this pin has been used.');
             }else{
+              $house = $this->generateHouse($incoming['gender']);
+              $incoming['house'] = $house;
     		  $id = $Delegates23->insert($incoming);
     		  $Pins->update($pin['id'],['used'=>'1']);
-    		  $this->msg('Congratulations! Your registration was successful <br> Reg. No: <b> '.$id.'</b>');
+    		  $this->msg('Congratulations! Your registration was successful <br> Reg. No: <b> '.$id.'</b> <br> Your house is <b>'.$house.'</b>');
     		}
         }
 	}
+
+    public function generateHouse($gender)
+    {
+        $mHouses = ['Abu Bakr', 'Umar', 'Uthman', 'Alli'];
+        $fHouses = ['Khadijah', 'Aishah', 'Ummu Khultum', 'Ummu Salma'];
+        if($gender=='male'){
+            $key = array_rand($mHouses);
+            return $mHouses[$key];
+        }else{
+            $key = array_rand($fHouses);
+            return $fHouses[$key];
+        }
+    }
 
 	public function sms()
 	{
@@ -162,14 +177,7 @@ class Logic extends BaseController
 		
 	public function samp()
 	{
-        $Pins = new \App\Models\Pins();
-
-        for ($i=1; $i <= 3000; $i++) {
-            $p = strtoupper($this->uniqidReal(6));
-            echo ($i.' '.$p.'<br>');
-            $id = $Pins->insert(['pin'=> $p, 'sold'=>0, 'used'=>0, 'vendor'=>'new']);
-
-        }
+        echo ($this->generateHouse('female'));
         // echo ($this->uniqidReal(16));
 
 	}
