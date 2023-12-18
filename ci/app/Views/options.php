@@ -9,6 +9,10 @@
                 <h2>Register</h2>
                 <small>I have pin, I want to register</small>
             </a>
+            <a href="<?=base_url('officialreg')?>" class="col border">
+                <h2>Official Reg.</h2>
+                <small>My Camp HOD referred me here</small>
+            </a>
             <a href="<?=base_url('pinstatus')?>" class="col border">
                 <h2>Status</h2>
                 <small>Is my pin valid?</small>

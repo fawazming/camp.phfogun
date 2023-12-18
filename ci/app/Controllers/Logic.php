@@ -36,6 +36,13 @@ class Logic extends BaseController
 		echo view('footer');
 	}
 
+    public function officialreg($pin = '')
+    {
+        echo view('header');
+        echo view('officialpin', ['pin'=>$pin]);
+        echo view('footer');
+    }
+
 	public function pinstatus()
 	{
         echo view('header');
@@ -69,13 +76,62 @@ class Logic extends BaseController
 		}
 	}
 
+    public function postofficialreg()
+    {
+        $incoming = $this->request->getPost();
+        // $Pins = new \App\Models\Pins();
+        $Delegates23 = new \App\Models\Delegates23();
+
+        if($value = $Delegates23->where(['ref'=>$incoming['pin']])->find()){
+            echo view('header');
+            echo view('officialreg',['data'=>$value[0]]);
+            echo view('footer');
+
+        }else{
+            $this->msg("The login access you entered is invalid");
+        }
+    }
+
+
+    public function officialupdate()
+    {
+        $incoming = $this->request->getPost();
+        // $Pins = new \App\Models\Pins();
+        $Delegates23 = new \App\Models\Delegates23();
+
+        if($Delegates23->where(['id'=>$incoming['id']])->find()[0]['category'] == 'Camp_Official'){
+            $this->msg("You have updated your department once. Contact the registry");
+        }else{
+            if($Delegates23->update($incoming['id'], ['school'=>$incoming['school'].'||'.$incoming['department'],'category'=>$incoming['category'], 'paid'=>'official'])) {
+                $this->msg("You are now officially in ".$incoming['department']." Department");
+
+            }else{
+                $this->msg("Update not successful");
+            }
+        }
+    }
+
 	public function pinstat()
 	{
 		$incoming = $this->request->getGet();
 		$Pins = new \App\Models\Pins();
-
+        $Delegates23 = new \App\Models\Delegates23();
 		$value = $Pins->where(['pin'=>$incoming['pin']])->find();
-		$this->msg("Is the pin used? ". $this->boolconv($value[0]['used']));
+        if($value == null){
+            $delData = $Delegates23->like(['lname'=>$incoming['pin']])->findAll();
+            if($delData == null){
+                $this->msg("Incorrect input");
+            }else{
+                $output = '';
+                foreach ($delData as $key => $delD) {
+                    $output = $output.'<br><b>ID:'.$delD['id'].' --> '.$delD['fname'].' '.$delD['lname'].'<br> of <i>'.$delD['lb'].'</i></b> Pin:'.$delD['ref'].' House:'.$delD['house'];
+                }
+                $this->msg($output);
+            }
+        }else{
+           $this->msg("Is the pin used? ". $this->boolconv($value[0]['used'])); 
+        }
+		
 		
 	}
 
@@ -240,7 +296,7 @@ class Logic extends BaseController
         }
     }
 
-public function webhk()
+    public function webhk()
     {
         $data = [
                     'to' => 'fawazpro27@gmail.com',
