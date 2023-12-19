@@ -26,6 +26,7 @@
                             <option value="Cooperate_Affairs">Cooperate_Affairs</option>
                             <option value="TFL">TFL</option>
                             <option value="Clinic">Clinic</option>
+                         <option value="Counseling Unit">Counseling Unit</option>
                         </select>
                         <input type="hidden" name="category" required value="Camp_Official">
                         <input type="hidden" name="id" required value="<?=$data['id']?>">
