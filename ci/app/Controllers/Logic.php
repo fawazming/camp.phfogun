@@ -15,39 +15,44 @@ class Logic extends BaseController
 		echo view('footer');
 	}
 
+    public function home()
+	{
+        echo view('options');
+	}
+
 	public function buypin()
 	{
-        echo view('header');
+        // echo view('header');
         echo view('buypin');
-		echo view('footer');
+		// echo view('footer');
 	}
 
     public function payonline()
     {
-        echo view('header');
+        // echo view('header');
         echo view('payonline');
-        echo view('footer');
+        // echo view('footer');
     }
 
 	public function register($pin = '')
 	{
-        echo view('header');
+        // echo view('header');
         echo view('pin', ['pin'=>$pin]);
-		echo view('footer');
+		// echo view('footer');
 	}
 
     public function officialreg($pin = '')
     {
-        echo view('header');
+        // echo view('header');
         echo view('officialpin', ['pin'=>$pin]);
-        echo view('footer');
+        // echo view('footer');
     }
 
 	public function pinstatus()
 	{
-        echo view('header');
+        // echo view('header');
         echo view('pinstatus');
-		echo view('footer');
+		// echo view('footer');
 	}
 
 	public function vendors()
@@ -192,7 +197,7 @@ class Logic extends BaseController
     public function generateHouse($gender)
     {
         $mHouses = ['Abu Bakr', 'Umar', 'Uthman', 'Alli'];
-        $fHouses = ['Khadijah', 'Aishah', 'Ummu Khultum', 'Ummu Salma'];
+        $fHouses = ['Khadijah', 'Aishah', 'Ummu Khultum', 'Ummu Salamah'];
         if($gender=='male'){
             $key = array_rand($mHouses);
             return $mHouses[$key];
@@ -233,8 +238,17 @@ class Logic extends BaseController
 		
 	public function samp()
 	{
-        echo ($this->generateHouse('female'));
-        // echo ($this->uniqidReal(16));
+        // echo ($this->generateHouse('female'));
+        // echo ($this->uniqidReal(7));
+        
+    	//  $Pins = new \App\Models\Pins();
+
+        // for ($i=1; $i <= 2000; $i++) {
+        //     $p = strtoupper($this->uniqidReal(7));
+        //     echo ($i.' '.$p.'<br>');
+        //     $id = $Pins->insert(['pin'=> $p, 'used'=>0,'vendor'=>'new','sold'=>0,'worth'=>'0']);
+
+        // }
 
 	}
 

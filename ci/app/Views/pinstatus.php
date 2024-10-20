@@ -1,4 +1,4 @@
-
+        <h5><a href="<?=base_url('/')?>">Home</a></h5>
         <h5>Input your pin</h5>
         <div class="container">
             <form method="GET" action="<?=base_url('pinstat')?>" style="display: flex; flex-direction: column; align-items: center; width: 100%;">

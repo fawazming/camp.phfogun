@@ -13,6 +13,7 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
 </g>
 </svg>
 </div>
+</main>
 <!--Waves end-->
         <center style="margin-top: 0px;">Designed with ❤️ by <a href="https://rayyantech.sgm.ng">Rayyan Technologies</a></center>
     </div>

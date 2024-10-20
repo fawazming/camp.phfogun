@@ -5,7 +5,8 @@ use CodeIgniter\Model;
 
 class Delegates23 extends Model
 {
-    protected $table = 'delegates23';
+    // protected $table = 'delegates23';
+    protected $table = 'delegates24';
     protected $primaryKey = 'id';
 
     protected $returnType = 'array';

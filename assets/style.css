@@ -1,6 +1,7 @@
 :root{
     --blue: #3498db;
     --bright: #e0e0e0;
+    --green: #009903;
 }
 body{
     background-image: url(bg.jpg);
@@ -90,6 +91,7 @@ fieldset{
 
 .border{
     border: #e0e0e0 1px solid;
+    background-color: #fff;
     border-radius: 10px;
     text-align: center;
     padding: 15px 8px;
@@ -101,6 +103,7 @@ fieldset{
 }
 .border>h2, .disabled>h2{
     line-height: 0;
+    color: var(--green);
 }
 .border>p{
     line-height: 1em;

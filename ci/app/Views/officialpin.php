@@ -1,4 +1,4 @@
-
+        <h5><a href="<?=base_url('/')?>">Home</a></h5>
         <h5>Input your Official Departmental pin to proceed</h5>
         <div class="container">
             <form method="POST" action="<?=base_url('officialreg')?>" style="display: flex; flex-direction: column; align-items: center; width: 100%;">
