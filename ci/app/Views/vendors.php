@@ -21,4 +21,9 @@
                 <p>GTB <br> 0036896883 <br> Adams Fatai</p>
                 <small><a href="https://wa.me/2348033899759">08033899759</a></small>
             </div>
+            <div class="col border">
+                <h2>Yewa</h2>
+                <p>Palmpay <br> 9160928753 <br> Ismaeel Haanat</p>
+                <small><a href="https://wa.me/2349160928753">09160928753</a></small>
+            </div>
         </div>
