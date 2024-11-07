@@ -3,8 +3,8 @@
         <div class="row">
             <div class="col border">
                 <h2>Remo 1</h2>
-                <p>Access Bank <br> 0043311961 <br> Fayombo Yusuf</p>
-                <small><a href="https://wa.me/2348063510530">0806 351 0530</a></small>
+                <p>Opay <br> 7080091091 <br> Mufutau Lukman</p>
+                <small><a href="https://wa.me/2348066389791">08066389791</a></small>
             </div>
             <div class="col border">
                 <h2>Ijebu 1</h2>
