@@ -41,6 +41,7 @@
                         <option value="Remo">Remo</option>
                         <option value="Ijebu">Ijebu</option>
                         <option value="Adoodo">Ado-Odo</option>
+                        <option value="Yewa">Yewa</option>
                         <option value="others">Others</option>
                     </select>
                 </div>
