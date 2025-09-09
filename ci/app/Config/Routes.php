@@ -30,28 +30,35 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-	$routes->get('/', 'Logic::index');
-	$routes->get('/samp', 'Logic::samp');
-	$routes->get('/buypin', 'Logic::buypin');
-$routes->get('/7c67ff5de8e5c90c/(:any)', 'Logic::vend/$1');
-$routes->get('/register', 'Logic::register');
-$routes->get('/register/(:any)', 'Logic::register/$1');
-$routes->get('/officialreg', 'Logic::officialreg');
-$routes->post('/officialreg', 'Logic::postofficialreg');
-$routes->post('/officialupdate', 'Logic::officialupdate');
-$routes->get('/officialreg/(:any)', 'Logic::officialreg/$1');
-$routes->get('/pinstatus', 'Logic::pinstatus');
-$routes->get('/vendors', 'Logic::vendors');
-$routes->get('/msg', 'Logic::msg');
-$routes->post('/register', 'Logic::registration');
-$routes->post('/sns/pmc', 'Logic::sms');
-$routes->get('pin', 'Logic::pin');
-$routes->get('samp', 'Logic::samp');
-$routes->get('pinstat', 'Logic::pinstat');
-$routes->get('payonline', 'Logic::payonline');
-$routes->post('proceedpayonline', 'Logic::proceedOnline');
-$routes->get('collectafricacall', 'Logic::webhook');
-$routes->get('tt', 'Logic::webhk');
+	// $routes->get('/', 'Logic::index');
+	// $routes->get('/samp', 'Logic::samp');
+	// $routes->get('/buypin', 'Logic::buypin');
+	// $routes->get('/7c67ff5de8e5c90c/(:any)', 'Logic::vend/$1');
+	// $routes->get('/register', 'Logic::register');
+	// $routes->get('/register/(:any)', 'Logic::register/$1');
+	// $routes->get('/officialreg', 'Logic::officialreg');
+	// $routes->post('/officialreg', 'Logic::postofficialreg');
+	// $routes->post('/officialupdate', 'Logic::officialupdate');
+	// $routes->get('/officialreg/(:any)', 'Logic::officialreg/$1');
+	// $routes->get('/pinstatus', 'Logic::pinstatus');
+	// $routes->get('/vendors', 'Logic::vendors');
+	// $routes->get('/msg', 'Logic::msg');
+	// $routes->post('/register', 'Logic::registration');
+	// $routes->post('/sns/pmc', 'Logic::sms');
+	// $routes->get('pin', 'Logic::pin');
+	// $routes->get('samp', 'Logic::samp');
+	// $routes->get('pinstat', 'Logic::pinstat');
+	// $routes->get('payonline', 'Logic::payonline');
+	// $routes->post('proceedpayonline', 'Logic::proceedOnline');
+	// $routes->get('collectafricacall', 'Logic::webhook');
+	// $routes->get('tt', 'Logic::webhk');
+
+	$routes->get('/', 'Home::index');
+	$routes->get('/register', 'Home::register');
+	$routes->get('/regc', 'Home::cregister');
+	$routes->post('/register', 'Home::pregister');
+	$routes->post('/registration', 'Home::registration');
+
 
 /**
  * --------------------------------------------------------------------
