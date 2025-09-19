@@ -11,7 +11,7 @@ class Delegates23 extends Model
 
     protected $returnType = 'array';
     protected $useSoftDeletes = true;
-    protected $allowedFields = ['txn','fname','lname','lb','phone','email','category','school','ref','old','paid','gender','org','house'];
+    protected $allowedFields = ['txn','fname','lname','lb','phone','email','category','school','level','ref','old','paid','gender','org','house'];
     protected $useTimestamps = true;
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';

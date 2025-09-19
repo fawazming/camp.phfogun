@@ -101,6 +101,7 @@ class Home extends BaseController
         $ref = substr($ref1, 3);
 
         $pgModel = new \App\Models\PgtransactionsModel();
+        $Delegates23 = new \App\Models\Delegates23();
 
         // Call the /verifypro/$ref endpoint to get verification data
         $verifyUrl = $_ENV['gateway']."/verifypro/".$ref1;
@@ -127,6 +128,12 @@ class Home extends BaseController
 
             if (!$existingTransaction) {
                 return redirect()->to('/notification')->with('error', 'Transaction not found.');
+            }
+
+            $existingTXN = $Delegates23->where('txn',$ref1)->first();
+
+            if ($existingTXN) {
+                return redirect()->to('/notification')->with('error', 'This paid ticket is already used by '.$existingTXN['fname']);
             }
 
             // Compare amount, access_code, business_id
@@ -185,8 +192,7 @@ class Home extends BaseController
         $incoming['house'] = $house;
         $id = $Delegates23->insert($incoming);
         // $Pins->update($pin['id'],['used'=>'1']); Update the transaction ID as used
-        return redirect()->to('/notification')->with('success', 'Congratulations! Your registration was successful <br> Reg. No: <b> '.$id.'</b> <br> Your house is <b>'.$house.'</b>');
-        // $this->msg('Congratulations! Your registration was successful <br> Reg. No: <b> '.$id.'</b> <br> Your house is <b>'.$house.'</b>');
+        return redirect()->to('/notification')->with('success', 'Congratulations! Your registration was successful with Registration No: '.$id.' & Your house is '.$house);
     		
 	}
 
