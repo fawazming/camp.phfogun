@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PMC Camp — Landing</title>
+  <title>PMC Camp</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     .gradient-hero{background:radial-gradient(1200px 600px at 10% -10%,rgba(79,70,229,.15),transparent 60%),radial-gradient(900px 500px at 100% 0,rgba(6,182,212,.18),transparent 55%),linear-gradient(180deg,#ffffff, #f8fafc);} 
