@@ -13,7 +13,7 @@ class Home extends BaseController
         'undergraduate' => 12604,
         'school_leaver' => 12600,
         'secondary_school_student' => 10100,
-        'test' => 100,
+        // 'test' => 100,
     ];
 
     /**
