@@ -30,7 +30,7 @@ class Home extends BaseController
             }
         }
 
-        return 'no category';
+        return null;
     }
 
     public function index()
@@ -163,7 +163,10 @@ class Home extends BaseController
             // Assuming category is part of verifyData or you can set default
 
             $category = $this->getCategoryByAmount($verifyData['amount']);
-            // dd($category);
+            
+            if (!$category) {
+                return redirect()->to('/notification')->with('error', 'Payment of '.$verifyData['amount'].' does not match any category');
+            }
 
             // Load the registration completion form view based on category
             // Pass any data needed to the view
