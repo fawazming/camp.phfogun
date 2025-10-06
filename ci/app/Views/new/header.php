@@ -18,8 +18,8 @@
         <a href="#" class="flex items-center gap-3">
           <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-600 to-cyan-500 text-white font-bold grid place-items-center">PMC</div>
           <div class="leading-tight">
-            <div class="font-semibold">PMC Camp</div>
-            <div class="text-xs text-slate-500 -mt-1">Faith • Growth • Service</div>
+            <div class="font-semibold">PMC Ogun</div>
+            <div class="text-xs text-slate-500 -mt-1">Pure Heart Modelling Camp</div>
           </div>
         </a>
         <nav class="hidden md:flex items-center gap-6 text-sm">
