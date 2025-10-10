@@ -52,7 +52,7 @@ class Home extends BaseController
         $incoming = $this->request->getPost();
         $client = \Config\Services::curlrequest();
 
-        $url = 'http://payflow.sgm.ng/api/authorize';
+        $url = $_ENV['gateway'].'/api/authorize';
         $amount = explode('|',$incoming['category'])[1];
         $headers = [
             'Authorization' => 'Bearer '.$_ENV['st'],
