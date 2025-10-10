@@ -65,6 +65,7 @@ class Home extends BaseController
             'amount' => $amount,
             'callback' => $_ENV['callback'],
         ];
+        dd($headers,$data);
 
         try {
             $response = $client->post($url, [
