@@ -65,7 +65,7 @@ class Home extends BaseController
             'amount' => $amount,
             'callback' => $_ENV['callback'],
         ];
-        dd($headers,$data);
+        // dd($headers,$data);
 
         try {
             $response = $client->post($url, [
@@ -75,7 +75,7 @@ class Home extends BaseController
 
             $body = $response->getBody();
             $result = json_decode($body);
-
+            dd($body);
             #insert data in DB
             $pgtrans = new \App\Models\PgtransactionsModel();
             $pgtrans->insert(['business_id'=>$_ENV['bid'],'access_code'=>$result->data->access_code, 'customer_phone'=>$result->data->reference, 'callback_url'=>$data['callback'], 'amount'=>$data['amount']]);
