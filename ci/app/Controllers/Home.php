@@ -9,10 +9,10 @@ class Home extends BaseController
 	use ResponseTrait;
 
     private $categories = [
-        'professionals' => 12605,
-        'undergraduate' => 12604,
-        'school_leaver' => 12600,
-        'secondary_school_student' => 10100,
+        'professionals' => 12100,
+        'undergraduate' => 10101,
+        'school_leaver' => 10100,
+        'secondary_school_student' => 8600,
         // 'test' => 100,
     ];
 
