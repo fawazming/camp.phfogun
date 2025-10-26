@@ -69,19 +69,19 @@
 			</nav>
 			<nav class="header-nav" id="header-nav">
 				<ul class="nav header-menu position-static">
-					<li class="nav-item "><a class="header-menu-toggle dropdown-toggle no-arrow" href="<?= base_url('/') ?>">Dashboard</a>
+					<li class="nav-item "><a class="header-menu-toggle dropdown-toggle no-arrow" href="<?= base_url('admin/') ?>">Dashboard</a>
 					</li>
 					<!-- <li class="nav-item dropdown"><a class="header-menu-toggle dropdown-toggle no-arrow" data-toggle="dropdown" href="javascript:;">Website<i class="ti-angle-down arrow ml-2"></i></a>
 						<div class="dropdown-menu">
 							<a class="dropdown-item d-flex align-items-center" href="<?= base_url('admin/variable') ?>"><span class="menu-link-point"></span>Site Variables</a>
 					</li> -->
-					<li class="nav-item "><a class="header-menu-toggle dropdown-toggle no-arrow" href="<?= base_url('printm') ?>">Manual Printer</a>
+					<li class="nav-item "><a class="header-menu-toggle dropdown-toggle no-arrow" href="<?= base_url('admin/printm') ?>">Manual Printer</a>
 					</li>
-					<li class="nav-item "><a class="header-menu-toggle dropdown-toggle no-arrow" href="<?= base_url('printe') ?>">Electronic Printer</a>
+					<li class="nav-item "><a class="header-menu-toggle dropdown-toggle no-arrow" href="<?= base_url('admin/printe') ?>">Electronic Printer</a>
 					</li>
-					<li class="nav-item "><a class="header-menu-toggle dropdown-toggle no-arrow" href="<?= base_url('printo') ?>">Officials Printer</a>
+					<li class="nav-item "><a class="header-menu-toggle dropdown-toggle no-arrow" href="<?= base_url('admin/printo') ?>">Officials Printer</a>
 					</li>
-					<li class="nav-item "><a class="header-menu-toggle dropdown-toggle no-arrow" href="<?= base_url('manual') ?>">Manual Upload</a>
+					<li class="nav-item "><a class="header-menu-toggle dropdown-toggle no-arrow" href="<?= base_url('admin/manual') ?>">Manual Upload</a>
 					</li>
 				</ul>
 				<div class="d-none d-md-flex align-items-center" style="padding-right: 30px"><button class="btn btn-outline-primary btn-sm"><span class="btn-icon"><i class="ti-pencil"></i>...</span></button></div>
