@@ -58,6 +58,26 @@ $routes->setAutoRoute(true);
 	$routes->get('/regc', 'Home::cregister');
 	$routes->post('/register', 'Home::pregister');
 	$routes->post('/registration', 'Home::registration');
+	
+	
+	$routes->get('/admin/logout', 'Admin::logout');
+	$routes->post('/auth', 'Admin::auth');
+
+
+
+$routes->group('admin', ['filter' => 'admin_auth'], function ($routes) {
+	$routes->get('/login', 'Admin::login');
+    $routes->get('/dashboard', 'Admin::dashboard');
+    $routes->get('/printe', 'Admin::printe');
+	$routes->get('/printo', 'Admin::printo');
+	$routes->get('/printm', 'Admin::printm');
+	$routes->get('/manual', 'Admin::manual');
+	$routes->get('/manual1', 'Admin::manual1');
+	$routes->post('/manual2', 'Admin::manual2');
+
+	$routes->get('/cert/(:any)', 'Admin::cert/$1');
+
+});
 
 
 /**
