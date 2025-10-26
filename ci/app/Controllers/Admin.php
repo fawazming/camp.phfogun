@@ -113,7 +113,7 @@ class Admin extends BaseController
                     'jsec' => $Delegates->where(['paid'=>'m','category'=>'jsec'])->countAllResults(),
                     'ssec' => $Delegates->where(['paid'=>'m','category'=>'ssec'])->countAllResults(),
                     'hi' => $Delegates->where(['paid'=>'m','category'=>'undergraduate'])->countAllResults(),
-                    'professionals' => $Delegates->where(['paid'=>'m','category'=>'professionals'])->countAllResults(),
+                    'workers' => $Delegates->where(['paid'=>'m','category'=>'professionals'])->countAllResults(),
 					'sch_leaver' => $Delegates->where(['paid'=>'m','category'=>'sch_leaver'])->countAllResults(),
 				]
 			];
