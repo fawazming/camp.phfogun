@@ -37,7 +37,7 @@
 							<td><?=$delegate['gender']?></td>
 							<td><?=$delegate['category']?></td>
 							<td><?=$delegate['lb']?></td>
-							<td><?=empty($delegate['ref'])?$delegate['tag']:$delegate['ref']?></td>
+							<td><?=isset($delegate['txn'])?$delegate['txn']:$delegate['ref']?></td>
 						</tr>
 						<?php endforeach; ?>
 					</tbody>
