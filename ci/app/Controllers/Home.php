@@ -78,8 +78,8 @@ class Home extends BaseController
             // dd($body);
             #insert data in DB
             $pgtrans = new \App\Models\PgtransactionsModel();
-            dd($pgtrans);
             $ik = $pgtrans->insert(['business_id'=>$_ENV['bid'],'access_code'=>$result->data->access_code, 'customer_phone'=>$result->data->reference, 'callback_url'=>$data['callback'], 'amount'=>$data['amount']]);
+            // dd($ik);
             if (isset($result->data->authorization_url)) {
                 // Redirect to the authorization_url
                 return redirect()->to($result->data->authorization_url);
