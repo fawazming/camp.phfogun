@@ -75,7 +75,7 @@ class Home extends BaseController
 
             $body = $response->getBody();
             $result = json_decode($body);
-            // dd($body);
+            dd($body);
             #insert data in DB
             $pgtrans = new \App\Models\PgtransactionsModel();
             $pgtrans->insert(['business_id'=>$_ENV['bid'],'access_code'=>$result->data->access_code, 'customer_phone'=>$result->data->reference, 'callback_url'=>$data['callback'], 'amount'=>$data['amount']]);
