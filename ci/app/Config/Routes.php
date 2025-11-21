@@ -68,6 +68,7 @@ $routes->setAutoRoute(true);
 $routes->group('admin', ['filter' => 'admin_auth'], function ($routes) {
 	$routes->get('/login', 'Admin::login');
     $routes->get('/dashboard', 'Admin::dashboard');
+    $routes->get('/stats', 'Admin::stats');
     $routes->get('/printe', 'Admin::printe');
 	$routes->get('/printo', 'Admin::printo');
 	$routes->get('/printm', 'Admin::printm');

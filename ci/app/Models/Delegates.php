@@ -16,4 +16,19 @@ class Delegates extends Model
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
     protected $deletedField  = 'deleted_at';
+
+        
+    public function getDCbTG()
+    {
+        return $this->select('lb, gender, COUNT(*) as count')
+                    ->groupBy('lb, gender')
+                    ->findAll();
+    }
+    
+    public function getDCbAG()
+    {
+        return $this->select('category, gender, COUNT(*) as count')
+                    ->groupBy('category, gender')
+                    ->findAll();
+    }
 }

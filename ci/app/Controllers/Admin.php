@@ -126,6 +126,68 @@ class Admin extends BaseController
 		}
 	}
 
+	public function stats()
+	{
+		// echo('dashboard');	
+		$logged_in = session()->get('admin_logged_in');
+		// $Delegates = new \App\Models\Delegates();
+		// $ManualDel = new \App\Models\ManualDel();
+		if ($logged_in) {
+			$year = session()->get('year');
+			if($year == 'current'){
+				$Delegates = new \App\Models\Delegates();
+			}else{
+				$Delegates = new \App\Models\DelegatesOld();
+			}
+
+			// Get counts for the 'tc' field
+			$tcCounts = $Delegates
+						   ->select('lb, COUNT(*) as count')
+						   ->groupBy('lb')
+						   ->get()
+						   ->getResultArray();
+	
+			// Get counts for the 'gender' field
+			$genderCounts = $Delegates
+							   ->select('gender, COUNT(*) as count')
+							   ->groupBy('gender')
+							   ->get()
+							   ->getResultArray();
+	
+			// Get counts for the 'category' field
+			$categoryCounts = $Delegates
+								 ->select('category, COUNT(*) as count')
+								 ->groupBy('category')
+								 ->get()
+								 ->getResultArray();
+
+			// Get counts for the 'category' field
+			$genderTCCounts = $Delegates
+								->getDCbTG();
+
+			// Get counts for the 'category' field
+			$AGCounts = $Delegates
+								->getDCbAG();
+	
+			// Prepare the data to be sent to the view
+			$data = [
+				'tcCounts'       => $tcCounts,
+				'genderCounts'   => $genderCounts,
+				'categoryCounts' => $categoryCounts,
+				'genderTcCounts' => $genderTCCounts,
+				'AgeGenderCounts' => $AGCounts,
+			];
+			// dd($genderTCCounts);
+			return view('admin/stats', $data);
+			// echo view('header', ['zone' => $_ENV['zone']]);
+			// echo view('dashboard', $data);
+			// echo view('footer');
+		} else {
+			echo view('admin/login');
+		}
+	}
+
+
 	public function manual()
 	{
 		$logged_in = session()->get('admin_logged_in');

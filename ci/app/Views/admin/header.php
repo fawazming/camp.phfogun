@@ -71,6 +71,8 @@
 				<ul class="nav header-menu position-static">
 					<li class="nav-item "><a class="header-menu-toggle dropdown-toggle no-arrow" href="<?= base_url('admin/') ?>">Dashboard</a>
 					</li>
+					<li class="nav-item "><a class="header-menu-toggle dropdown-toggle no-arrow" href="<?= base_url('admin/stats') ?>">Detailed Statistics</a>
+					</li>
 					<!-- <li class="nav-item dropdown"><a class="header-menu-toggle dropdown-toggle no-arrow" data-toggle="dropdown" href="javascript:;">Website<i class="ti-angle-down arrow ml-2"></i></a>
 						<div class="dropdown-menu">
 							<a class="dropdown-item d-flex align-items-center" href="<?= base_url('admin/variable') ?>"><span class="menu-link-point"></span>Site Variables</a>
