@@ -55,10 +55,12 @@ $routes->setAutoRoute(true);
 
 	$routes->get('/', 'Home::index');
 	$routes->get('/register', 'Home::register');
+	$routes->get('/bulkregister', 'Home::bRegister');
 	// $routes->get('/regc', 'Home::cregister');
 	$routes->get('/regc', 'Home::creg');
 	$routes->get('/reg/(:any)/(:any)', 'Home::reg/$1/$2');
 	$routes->post('/register', 'Home::pregister');
+	$routes->post('/bregister', 'Home::pBulkRegister');
 	$routes->post('/registration', 'Home::registration');
 	
 	

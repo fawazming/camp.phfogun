@@ -47,11 +47,68 @@ class Home extends BaseController
     public function register()
     {
         echo view('new/header');
+        echo view('new/oldRegister');
+        echo view('new/footer');
+    }
+    
+    public function bRegister()
+    {
+        echo view('new/header');
         echo view('new/register');
         echo view('new/footer');
     }
 
     public function pregister()
+    {
+        $incoming = $this->request->getPost();
+        $client = \Config\Services::curlrequest();
+
+        $url = $_ENV['gateway'].'/api/authorize';
+        $amount = explode('|',$incoming['category'])[1];
+        $headers = [
+            'Authorization' => 'Bearer '.$_ENV['st'],
+            'api-key' => $_ENV['ak'],
+            'Content-Type' => 'application/json',
+        ];
+
+        $data = [
+            'email' => $incoming['email'],
+            'amount' => $amount,
+            'callback' => $_ENV['callback'],
+        ];
+        // dd($headers,$data);
+
+        try {
+            $response = $client->post($url, [
+                'headers' => $headers,
+                'json' => $data,
+            ]);
+
+            $body = $response->getBody();
+            $result = json_decode($body);
+            // dd($body);
+            #insert data in DB
+            $pgtrans = new \App\Models\PgtransactionsModel();
+            $ik = $pgtrans->insert(['business_id'=>$_ENV['bid'],'access_code'=>$result->data->access_code, 'customer_phone'=>$result->data->reference, 'callback_url'=>$data['callback'], 'amount'=>$data['amount']]);
+            // dd($ik);
+            if (isset($result->data->authorization_url)) {
+                // Redirect to the authorization_url
+                return redirect()->to($result->data->authorization_url);
+            } else {
+                // Handle missing authorization_url
+                return $this->response->setStatusCode(400)->setJSON([
+                    'error' => 'Authorization URL not found in response',
+                ]);
+            }
+
+        } catch (\Exception $e) {
+            return $this->response->setStatusCode(500)->setJSON([
+                'error' => $e->getMessage(),
+            ]);
+        }
+    }
+
+    public function pBulkRegister()
     {
         $incoming = $this->request->getPost();
         $client = \Config\Services::curlrequest();

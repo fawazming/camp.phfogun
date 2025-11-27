@@ -9,7 +9,7 @@
         <div class="text-sm text-gray-500">Mobile responsive • Bank transfer supported</div>
       </div>
 
-      <form id="emailCategoryForm" class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3" action="<?=base_url('register')?>" method="POST">
+      <form id="emailCategoryForm" class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3" action="<?=base_url('bregister')?>" method="POST">
         <div class="sm:col-span-2">
           <label class="block text-xs font-medium text-gray-600">Email</label>
           <input id="email" type="email" required class="mt-1 w-full rounded-lg border-gray-200 shadow-sm p-3 focus:outline-none focus:ring-2 focus:ring-indigo-300" placeholder="you@example.com" name="email">
