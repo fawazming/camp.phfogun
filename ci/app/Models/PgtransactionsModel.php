@@ -26,7 +26,7 @@ class PgtransactionsModel extends Model
         'timestamp',
         'status',
         'description',
-        'related_transaction_id',
+        'related_transaction',
         'expires_at',
         'validated_at',
         'notification_status',
