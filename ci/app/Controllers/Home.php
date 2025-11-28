@@ -118,6 +118,7 @@ class Home extends BaseController
         $bulk = json_decode($incoming['bulk'], true);
         $amount = 0;
         $processedBulk = [];
+        $tickets = 0;
 
         foreach ($bulk as $item) {
             $itemAmount = $item['price'] * $item['qty'];
@@ -125,6 +126,7 @@ class Home extends BaseController
             $item['tickets'] = [];
             
             for ($i = 0; $i < $item['qty']; $i++) {
+                $tickets++;
                 $item['tickets'][] = [
                     'id' => strtoupper(bin2hex(random_bytes(2))),
                     'used' => false,
@@ -147,6 +149,7 @@ class Home extends BaseController
             'email' => $incoming['email'],
             'amount' => $amount,
             'callback' => $_ENV['callback'],
+            'tickets' => $tickets,
         ];
         // dd($headers,$data, $incoming['bulk']);
 
