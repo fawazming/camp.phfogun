@@ -344,6 +344,9 @@ class Home extends BaseController
                     'tickets' => $relatedTransactions,
                 ];
 
+                if ($verifyData['amount'] != $verifyData['currency']) {
+                    return redirect()->to('/notification')->with('error', 'Expecting ₦'.$verifyData['amount'].' but got ₦'.$verifyData['currency']);
+                }
 
                 // var_dump($data); exit;
                 
@@ -359,17 +362,13 @@ class Home extends BaseController
                 return redirect()->to('/notification')->with('error', 'This paid ticket is already used by '.$existingTXN['fname']);
             }
 
-
-
-
-
             // Determine category for registration completion form
             // Assuming category is part of verifyData or you can set default
 
-            $category = $this->getCategoryByAmount($verifyData['amount']);
+            $category = $this->getCategoryByAmount($verifyData['currency']);
             
             if (!$category) {
-                return redirect()->to('/notification')->with('error', 'Payment of '.$verifyData['amount'].' does not match any category');
+                return redirect()->to('/notification')->with('error', 'Payment of '.$verifyData['currency'].' does not match any category');
             }
 
             // Load the registration completion form view based on category
