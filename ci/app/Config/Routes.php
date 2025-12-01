@@ -54,8 +54,8 @@ $routes->setAutoRoute(true);
 	// $routes->get('tt', 'Logic::webhk');
 
 	$routes->get('/', 'Home::index');
-	$routes->get('/registrar', 'Home::register');
-	$routes->get('/bulkregistrar', 'Home::bRegister');
+	$routes->get('/register', 'Home::register');
+	$routes->get('/bulkregister', 'Home::bRegister');
 	// $routes->get('/regc', 'Home::cregister');
 	$routes->get('/regc', 'Home::creg');
 	$routes->get('/reg/(:any)/(:any)', 'Home::reg/$1/$2');

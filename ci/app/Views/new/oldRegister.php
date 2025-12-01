@@ -32,5 +32,11 @@
         </div>
       </form>
     </section>
+    <section class="mt-6 text-center">
+      <p class="text-sm text-gray-500">Need to register multiple attendees?</p>
+      <a href="<?= base_url('bulkregister') ?>" class="inline-flex items-center gap-2 mt-2 px-5 py-3 bg-indigo-50 text-indigo-700 rounded-lg border border-indigo-100 hover:bg-indigo-100">
+        Register multiple
+      </a>
+    </section>
 
 </main>
