@@ -19,10 +19,10 @@
           <label class="block text-xs font-medium text-gray-600">Category</label>
           <select id="category" required class="mt-1 w-full rounded-lg border-gray-200 p-3" name="category">
             <option value="">Select a Category</option>
-            <option value="Worker|12100">Worker</option>
-            <option value="Undergraduate|10101">Undergraduate</option>
-            <option value="SchoolLeaver|10100">School Leaver</option>
-            <option value="SSS|8600">Secondary School Student</option>
+            <option value="Worker|15100">Worker</option>
+            <option value="Undergraduate|12101">Undergraduate</option>
+            <option value="SchoolLeaver|12100">School Leaver</option>
+            <option value="SSS|10099">Secondary School Student</option>
             <!-- <option value="test|100">Test</option> -->
           </select>
         </div>

@@ -9,15 +9,14 @@ class Home extends BaseController
 	use ResponseTrait;
 
     private $categories = [
-        'professionals' => 12100,
-        'undergraduate' => 10101,
-        'school_leaver' => 10100,
-        'secondary_school_student' => 8600,
-        // 'test' => 100,
-        // 'test1' => 10,
-        // 'test2' => 20,
-        // 'test5' => 5,
-
+        12100 => 'professionals',
+        10101 => 'undergraduate',
+        10100 => 'school_leaver',
+        8600 => 'secondary_school_student',
+        15100 => 'professionals',
+        12101 => 'undergraduate',
+        12100 => 'school_leaver',
+        10099 => 'secondary_school_student',
     ];
 
     /**
@@ -28,7 +27,7 @@ class Home extends BaseController
      */
     public function getCategoryByAmount($amount)
     {
-        foreach ($this->categories as $category => $price) {
+        foreach ($this->categories as $price => $category) {
             if ($price == $amount) {
                 return $category;
             }
