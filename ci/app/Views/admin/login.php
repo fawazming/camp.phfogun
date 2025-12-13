@@ -97,10 +97,10 @@
 		<div class="page-preloader">Loading</div>
 	</div><!-- END: Page backdrops-->
 	<!-- CORE PLUGINS-->
-	<script src="<?= base_url('assets/admin/vendors/jquery/dist/jquery.min.js') ?>"></script>
-	<script src="<?= base_url('assets/admin/vendors/bootstrap/dist/js/bootstrap.bundle.min.js') ?>"></script><!-- PAGE LEVEL PLUGINS-->
-	<script src="<?= base_url('assets/admin/vendors/jquery-validation/dist/jquery.validate.min.js') ?>"></script><!-- CORE SCRIPTS-->
-	<script src="<?= base_url('assets/admin/js/app.min.js') ?>"></script><!-- PAGE LEVEL SCRIPTS-->
+	<script src="<?= base_url('assets/admin/vendors/assets/jquery.min.js') ?>"></script>
+	<script src="<?= base_url('assets/admin/vendors/assets/bootstrap.bundle.min.js') ?>"></script><!-- PAGE LEVEL PLUGINS-->
+	<script src="<?= base_url('assets/admin/vendors/assets/jquery.validate.min.js') ?>"></script><!-- CORE SCRIPTS-->
+	<script src="<?= base_url('assets/admin/vendors/assets/app.min.js') ?>"></script><!-- PAGE LEVEL SCRIPTS-->
 	<script>
 		$(function() {
 			$('#login-form').validate({

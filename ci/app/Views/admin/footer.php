@@ -158,8 +158,8 @@
 </div><!-- END: Quick sidebar-->
 
 <!-- CORE PLUGINS-->
-<!-- <script src="<?= base_url('assets/admin/vendors/jquery/dist/jquery.min.js') ?>"></script> -->
-<script src="<?= base_url('assets/admin/vendors/bootstrap/dist/js/bootstrap.bundle.min.js') ?>"></script>
+<!-- <script src="<?= base_url('assets/admin/vendors/assets/jquery.min.js') ?>"></script> -->
+<script src="<?= base_url('assets/admin/vendors/assets/bootstrap.bundle.min.js') ?>"></script>
 <script src="<?= base_url('assets/admin/vendors/metismenu/dist/metisMenu.min.js') ?>"></script>
 <script src="<?= base_url('assets/admin/vendors/perfect-scrollbar/dist/perfect-scrollbar.min.js') ?>"></script><!-- PAGE LEVEL PLUGINS-->
 <script src="<?= base_url('assets/admin/vendors/moment/min/moment.min.js') ?>"></script>
