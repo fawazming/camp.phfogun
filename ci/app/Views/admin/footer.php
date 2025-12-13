@@ -160,10 +160,10 @@
 <!-- CORE PLUGINS-->
 <!-- <script src="<?= base_url('assets/admin/vendors/assets/jquery.min.js') ?>"></script> -->
 <script src="<?= base_url('assets/admin/vendors/assets/bootstrap.bundle.min.js') ?>"></script>
-<script src="<?= base_url('assets/admin/vendors/metismenu/dist/metisMenu.min.js') ?>"></script>
-<script src="<?= base_url('assets/admin/vendors/perfect-scrollbar/dist/perfect-scrollbar.min.js') ?>"></script><!-- PAGE LEVEL PLUGINS-->
+<script src="<?= base_url('assets/admin/vendors/assets/metisMenu.min.js') ?>"></script>
+<script src="<?= base_url('assets/admin/vendors/assets/perfect-scrollbar.min.js') ?>"></script><!-- PAGE LEVEL PLUGINS-->
 <script src="<?= base_url('assets/admin/vendors/moment/min/moment.min.js') ?>"></script>
-<script src="<?= base_url('assets/admin/vendors/easy-pie-chart/dist/jquery.easypiechart.min.js') ?>"></script>
+<script src="<?= base_url('assets/admin/vendors/assets/jquery.easypiechart.min.js') ?>"></script>
 <script src="<?= base_url('assets/admin/vendors/bootstrap-daterangepicker/daterangepicker.js') ?>"></script>
 <script src="<?= base_url('assets/admin/vendors/chart.js/dist/Chart.min.js') ?>"></script><!-- CORE SCRIPTS-->
 <!-- <script src="<?= base_url('assets/admin/vendors/DataTables/datatables.min.js') ?>"></script> -->

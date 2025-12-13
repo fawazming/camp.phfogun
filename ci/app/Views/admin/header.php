@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel='shortcut icon' href='<?= base_url('assets/img/favicon.jpg') ?>'>
 	<meta name="robots" CONTENT="noindex, nofollow">
-	<title>PMC 2020:: Statistics Admin Panel</title><!-- GLOBAL VENDORS-->
+	<title>PMC:: Statistics Admin Panel</title><!-- GLOBAL VENDORS-->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" media="all">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 	<link href="<?= base_url('assets/admin/vendors/feather-icons/feather.css') ?>" rel="stylesheet" />
@@ -18,7 +18,7 @@
 	<link href="<?= base_url('assets/admin/vendors/perfect-scrollbar/css/perfect-scrollbar.css') ?>" rel="stylesheet" /><!-- PAGE LEVEL VENDORS-->
 	<link href="<?= base_url('assets/admin/vendors/bootstrap-daterangepicker/daterangepicker.css') ?>" rel="stylesheet" /><!-- THEME STYLES-->
 	<link href="<?= base_url('assets/admin/css/app.min.css') ?>" rel="stylesheet" />
-	<script src="<?= base_url('assets/admin/vendors/jquery/dist/jquery.min.js') ?>"></script>
+	<script src="<?= base_url('assets/admin/vendors/assets/jquery.min.js') ?>"></script>
 	<style>
 		.data-widget-icon {
 			position: absolute;
