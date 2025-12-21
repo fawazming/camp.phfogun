@@ -77,14 +77,14 @@
 						<div class="dropdown-menu">
 							<a class="dropdown-item d-flex align-items-center" href="<?= base_url('admin/variable') ?>"><span class="menu-link-point"></span>Site Variables</a>
 					</li> -->
-					<li class="nav-item "><a class="header-menu-toggle dropdown-toggle no-arrow" href="<?= base_url('admin/printm') ?>">Manual Printer</a>
-					</li>
 					<li class="nav-item "><a class="header-menu-toggle dropdown-toggle no-arrow" href="<?= base_url('admin/printe') ?>">Electronic Printer</a>
 					</li>
-					<li class="nav-item "><a class="header-menu-toggle dropdown-toggle no-arrow" href="<?= base_url('admin/printo') ?>">Officials Printer</a>
+					<li class="nav-item "><a class="header-menu-toggle dropdown-toggle no-arrow" href="<?= base_url('admin/tag') ?>">Tags</a>
+					</li>
+					<!-- <li class="nav-item "><a class="header-menu-toggle dropdown-toggle no-arrow" href="<?= base_url('admin/printo') ?>">Officials Printer</a>
 					</li>
 					<li class="nav-item "><a class="header-menu-toggle dropdown-toggle no-arrow" href="<?= base_url('admin/manual') ?>">Manual Upload</a>
-					</li>
+					</li> -->
 				</ul>
 				<div class="d-none d-md-flex align-items-center" style="padding-right: 30px"><button class="btn btn-outline-primary btn-sm"><span class="btn-icon"><i class="ti-pencil"></i>...</span></button></div>
 			</nav>

@@ -187,6 +187,64 @@ class Admin extends BaseController
 		}
 	}
 
+	
+    public function tag()
+    {
+        $logged_in = session()->get('admin_logged_in');
+        if ($logged_in) { 
+            $Delegates = new \App\Models\Delegates();
+            $headerdata = [
+                'admin' => session()->get('admin'),
+                'clear' => session()->get('clear'),
+                'admin_code' => session()->get('admincode'),
+            ];
+
+            $data = [
+                'tdel' => $Delegates->countAll(),
+            ];
+
+            echo view('admin/header', $headerdata);
+            echo view('admin/tag', $data);
+            echo view('admin/footer');
+        } else {
+            echo view('admin/login');
+        }
+    }
+
+
+    public function printtag()
+    {
+        $logged_in = session()->get('admin_logged_in');
+        if ($logged_in) {
+            $incoming = $this->request->getPost();
+            $range = explode('-',$incoming['range']);
+
+            $Delegates = new \App\Models\Delegates();
+            $del = '';
+			if(count($range)==1){
+				$del = $Delegates->where('id',$range[0])->find();
+				if(isset($del[0]) && $del[0]['category'] == 'secondary_school_student'){
+					$del[0]['category'] = 'Secondary';
+				}
+            }else{
+                $del = [];
+				for ($i = $range[0]; $i < ($range[1] + 1); $i++) {
+					$found = $Delegates->where('id', $i)->find();
+					if (isset($found[0]) && $found[0]['category'] === 'secondary_school_student') {
+						$found[0]['category'] = 'Secondary';
+					}
+					array_push($del, $found);
+				}
+            }
+
+			// dd($del);
+            echo view('admin/tags', ['del'=>$del]);
+        } else {
+            echo view('admin/login');
+        }
+    }
+
+
 
 	public function manual()
 	{

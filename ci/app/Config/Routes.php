@@ -79,6 +79,9 @@ $routes->group('admin', ['filter' => 'admin_auth'], function ($routes) {
 	$routes->get('/manual', 'Admin::manual');
 	$routes->get('/manual1', 'Admin::manual1');
 	$routes->post('/manual2', 'Admin::manual2');
+	
+    $routes->get('/tag', 'Admin::tag');
+    $routes->post('/printtag', 'Admin::printtag');
 
 	$routes->get('/cert/(:any)', 'Admin::cert/$1');
 

@@ -20,8 +20,10 @@
 							<th>Surname</th>
 							<th>Name</th>
 							<th>Phone</th>
-							<th>Sex</th>
+							<th>Gender</th>
 							<th>Category</th>
+							<th>Level</th>
+							<th>House</th>
 							<th>Zone</th>
 							<th>Pin</th>
 						</tr>
@@ -36,6 +38,8 @@
 							<!-- <td><span class="badge badge-success badge-pill">Shipped</span></td> -->
 							<td><?=$delegate['gender']?></td>
 							<td><?=$delegate['category']?></td>
+							<td><?=$delegate['level']?></td>
+							<td><?=$delegate['house']?></td>
 							<td><?=$delegate['lb']?></td>
 							<td><?=isset($delegate['txn'])?$delegate['txn']:$delegate['ref']?></td>
 						</tr>
