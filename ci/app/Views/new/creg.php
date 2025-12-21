@@ -148,6 +148,23 @@
       input.placeholder = "Current job role...";
       input.className = "mt-1 w-full rounded-lg border-gray-700 p-3";
       levelField.appendChild(input);
+    } else if (value === "tfl") {
+      const select = document.createElement("select");
+      select.name = "level";
+      select.id = "level";
+      select.className = "mt-1 w-full rounded-lg border-gray-700 p-3";
+      levelLabel.textContent = "Class in School";
+      schLabel.textContent = "Name of your school";
+
+      ["Nursery", "Basic1", "Basic2", "Basic3", "Basic4", "Basic5", "Basic6"].forEach(lvl => {
+        const opt = document.createElement("option");
+        opt.value = lvl;
+        opt.textContent = lvl;
+        select.appendChild(opt);
+      });
+
+      levelField.appendChild(select);
+
     }
 </script>
 
