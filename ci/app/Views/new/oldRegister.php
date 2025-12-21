@@ -23,6 +23,7 @@
             <option value="Undergraduate|12101">Undergraduate</option>
             <option value="SchoolLeaver|12100">School Leaver</option>
             <option value="SSS|10099">Secondary School Student</option>
+            <option value="TFL|6000">TFL</option>
             <!-- <option value="test|100">Test</option> -->
           </select>
         </div>
