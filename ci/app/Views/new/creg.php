@@ -148,7 +148,7 @@
       input.placeholder = "Current job role...";
       input.className = "mt-1 w-full rounded-lg border-gray-700 p-3";
       levelField.appendChild(input);
-    } else if (value === "tfl") {
+    } else if (value === "TFL") {
       const select = document.createElement("select");
       select.name = "level";
       select.id = "level";
